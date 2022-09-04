@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Compte - Investir en Afrique{% endblock %}
+
+{% block content %}
+<h1>Mon Compte</h1>
+{% if is_granted('ROLE_ADMIN') %}
+<small><a href="/admin">Vous êtes un administrateur, accéder au backoffice ! </a></small><br/>
+{% endif %}
+Bienvenue {{ app.user.nom }} dans mon votre compte.<br/>
+c'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles.
+<hr> 
+<div class="row">
+<div class="col-md-4">
+<div class="account-item text-center">
+<img src="{{ ('assets/pictures/password.png') }}" alt="Modifier mon mot de passe"><br/>
+<a href="{{ path('account_password') }}">Modifier mon mot de passe</a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="account-item text-center">
+<img src="{{ ('assets/pictures/letter.png') }}" alt="Gérer mes adresses"><br/>
+<a href="{{ path('account_address') }}">Gérer mes adresses</a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="account-item text-center">
+<img src="{{ ('assets/pictures/letter.png') }}" alt="Mes commandes"><br/>
+<a href="{{ path('account_order') }}">Mes commandes</a>
+</div>
+</div>
+</div>
+<hr>
+{% endblock %}

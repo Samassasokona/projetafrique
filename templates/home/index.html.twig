@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+{% block carousel %}{% endblock %}
+{% block content %}
+
+
+
+
+
+        <!-- Three columns of text below the carousel -->
+        <h3>Nos meilleures ventes</h3>
+        <p> Découvrez les articles les plus vendus. </p>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                {% include 'product/single_product.html.twig' %}
+                </div>
+            {% endfor %}
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Artisanat Africain. <span class="text-muted">L'art est le plus beau des mensonges.</span></h2>
+                <p class="lead">Vous pouvez acheter en ligne des bijoux ethniques originaux, en tissus wax et autres imprimés africains de splendides parures en perles africaines de verre ou de bronze, des bracelets africains, des boucles d’oreilles africaines  des colliers africains, des bagues africaines et broches… ou un large gamme de bijoux éthiques, de bijoux fantaisie ou bijoux ethniques. Les vendeurs réalisent aussi des bijoux touareg de créateurs inspirés par les célèbres croix d’Agadez. Ces bijoux variés sont aussi bien pas chers et à petits prix que des pièces d'exception pour les grandes occasions</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('assets/pictures/histoire.jpg') }}" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading"> Nos Engagements Éthique et Valeurs<span class="text-muted"> Commerce équitable, nos ambitions, la volonté de toujours faire mieux</span></h2>
+                <p class="lead">Le commerce équitable est un modèle d’économie éthique et responsable. Encadré par des cahiers des charges stricts, il est basé sur des modes de production, de commercialisation et de consommation qui contribuent au développement durable. La sagesse de la terre est une complicité totale entre l’homme et son environnement.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+               <img src="{{ asset('assets/pictures/écolo.jpg') }}" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading"> IMPACT SOCIAL <span class="text-muted">social.</span></h2>
+                <p class="lead">vos commandes permettent à des travailleurs artisanaux de bénéficier d'une précarité. De la rénovation des locaux à la rémunération de nos artisans locaux, Inverstir en Afrique finance tout, et ceci, grâce à VOUS, alors merci pour eux.</div>
+    	<div style="text-align:center"></p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('assets/pictures/raman.jpg') }}" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        
+{% endblock %}
