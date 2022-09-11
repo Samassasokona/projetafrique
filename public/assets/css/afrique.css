@@ -112,3 +112,11 @@ margin-top: 22px;
     color: red;
     text-decoration: none;
 }
+
+.figure {
+    margin: 0;
+}
+
+.audio-footer {
+    height: 56px;
+}
